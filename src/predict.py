@@ -4,8 +4,8 @@ import numpy as np
 from xgboost import XGBClassifier
 
 model = XGBClassifier()
-model.load_model("maintenance_model.json")
-scaler = joblib.load("scaler.joblib")
+model.load_model("models/maintenance_model.json")
+scaler = joblib.load("models/scaler.joblib")
 
 def real_time_prediction(raw_data, threshold=0.3):
     """
